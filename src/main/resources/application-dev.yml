@@ -1,0 +1,45 @@
+# 服务器端口
+server:
+  port: 80
+
+
+# 数据库连接
+my:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    # Aero win
+    url: jdbc:mysql://localhost:3306/chatroom?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=true
+    # lenovo
+    #url: jdbc:mysql://10.112.98.226:3306/chatroom?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=true
+    username: root
+    password: root
+
+
+spring:
+  # 静态资源
+  resources:
+    # 静态资源查找路径，注意使用","号隔开 （包含 server上的文件目录）
+    static-locations: classpath:/static/,file:/data/evernote/,classpath:/resources/
+    # 开发环境关闭缓存
+    chain:
+      cache: false
+    # 开启 静态资源映射处理器
+    #add-mappings: true
+
+
+  # thymeleaf模板引擎
+  thymeleaf:
+    prefix: classpath:/static/
+    suffix: .html
+    cache: false
+
+
+  #spring-session 使用
+  session:
+    store-type: none
+
+logging:
+  config: src/main/resources/log4j2-dev.xml
+
+
+
