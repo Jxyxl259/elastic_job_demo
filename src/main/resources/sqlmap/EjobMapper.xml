@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jiang.demo.elasticjob.dao.EjobMapper">
+
+        <insert id="insertJob" parameterType="com.jiang.demo.elasticjob.entity.JobEntity" keyProperty="id" useGeneratedKeys="true">
+            insert into e_job (id, ip, create_time) values (null, #{ip}, #{createTime})
+        </insert>
+
+</mapper>

@@ -45,7 +45,7 @@ spring:
     store-type: none
 
 logging:
-  config: src/main/resources/log4j2-dev.xml
+  config: classpath:/log4j2-dev.xml
 
 
 
